@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="36px" viewBox="0 0 20 36" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+  <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+  <title>Icons/System/ Arrow left</title>
+  <desc>Created with Sketch.</desc>
+  <defs>
+    <path
+      d="M32,42 C31.488,42 30.976,41.804 30.586,41.414 L14.586,25.414 C13.804,24.632 13.804,23.368 14.586,22.586 L30.586,6.586 C31.368,5.804 32.632,5.804 33.414,6.586 C34.196,7.368 34.196,8.632 33.414,9.414 L18.828,24 L33.414,38.586 C34.196,39.368 34.196,40.632 33.414,41.414 C33.024,41.804 32.512,42 32,42"
+      id="path-1"></path>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Icons/System/-Arrow-left"
+       transform="translate(10.000000, 18.000000) rotate(180.000000) translate(-10.000000, -18.000000) translate(-14.000000, -6.000000)">
+      <mask id="mask-2" fill="white">
+        <use xlink:href="#path-1"></use>
+      </mask>
+      <use id="Arrow-left" fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+      <g id="🌈/-Grey-/-L" mask="url(#mask-2)" fill="#757575" fill-rule="evenodd">
+        <rect id="Mid-Grey" x="0" y="0" width="48" height="48"></rect>
+      </g>
+    </g>
+  </g>
+</svg>

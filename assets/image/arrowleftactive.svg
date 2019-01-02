@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="36px" viewBox="0 0 20 36" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+  <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+  <title>Icons/System/ Arrow left Copy</title>
+  <desc>Created with Sketch.</desc>
+  <defs>
+    <path
+      d="M16,42 C15.488,42 14.976,41.804 14.586,41.414 C13.804,40.632 13.804,39.368 14.586,38.586 L29.172,24 L14.586,9.414 C13.804,8.632 13.804,7.368 14.586,6.586 C15.368,5.804 16.632,5.804 17.414,6.586 L33.414,22.586 C34.196,23.368 34.196,24.632 33.414,25.414 L17.414,41.414 C17.024,41.804 16.512,42 16,42"
+      id="path-1"></path>
+  </defs>
+  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Icons/System/-Arrow-right"
+       transform="translate(10.000000, 18.000000) rotate(180.000000) translate(-10.000000, -18.000000) translate(-14.000000, -6.000000)">
+      <mask id="mask-2" fill="white">
+        <use xlink:href="#path-1"></use>
+      </mask>
+      <use id="Arrow-right" fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+      <g id="🌈/-Black" mask="url(#mask-2)" fill="#000000" fill-rule="evenodd">
+        <rect id="Rectangle" x="0" y="0" width="48" height="48"></rect>
+      </g>
+    </g>
+  </g>
+</svg>

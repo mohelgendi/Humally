@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sequelizer</title>
+    <link rel="stylesheet" href="./mdl/material.min.css">
+    <script src="./mdl/material.min.js"></script>
+  </head>
+  <body>
+    <div id="progressBar" class="mdl-progress mdl-js-progress mdl-progress__indeterminate" style="width: 100%; display: none"></div>
+    <div id="main">
+      <form onsubmit="handleSubmit(this); return false;">
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="host" name="host" value="localhost" required>
+              <label class="mdl-textfield__label" for="host">Host</label>
+              <span class="mdl-textfield__error">Host cannot be number empty!</span>
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="port" pattern="-?[0-9]*(\.[0-9]+)?" name="port" value="3306" required>
+              <label class="mdl-textfield__label" for="port">Port</label>
+              <span class="mdl-textfield__error">Port must be number type and cannot be empty!</span>
+            </div>
+          </div>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="database" name="database">
+              <label class="mdl-textfield__label" for="database">Database</label>
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="dialect-mysql">
+              <input type="radio" id="dialect-mysql" class="mdl-radio__button" onchange='onDialectChange("mysql")' name="dialect" value="mysql" checked>
+              <span class="mdl-radio__label">Mysql</span>
+            </label>
+            <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="dialect-mariadb">
+              <input type="radio" id="dialect-mariadb" class="mdl-radio__button" onchange='onDialectChange("mariadb")' name="dialect" value="mariadb">
+              <span class="mdl-radio__label">Mariadb</span>
+            </label>
+             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="dialect-sqlite">
+              <input type="radio" id="dialect-sqlite" class="mdl-radio__button" onchange='onDialectChange("sqlite")' name="dialect" value="sqlite">
+              <span class="mdl-radio__label">Sqlite</span>
+            </label>
+             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="dialect-postgres">
+              <input type="radio" id="dialect-postgres" class="mdl-radio__button" onchange='onDialectChange("postgres")' name="dialect" value="postgres">
+              <span class="mdl-radio__label">Postgres</span>
+            </label>
+             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="dialect-mssql">
+              <input type="radio" id="dialect-mssql" class="mdl-radio__button" onchange='onDialectChange("mssql")' name="dialect" value="mssql">
+              <span class="mdl-radio__label">Mssql</span>
+            </label>
+          </div>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="username" name="username">
+              <label class="mdl-textfield__label" for="username">Username</label>
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="password" id="password" name="password">
+              <label class="mdl-textfield__label" for="password">Password</label>
+            </div>
+          </div>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="text" id="tables" name="tables">
+              <label class="mdl-textfield__label" for="tables">Tables(Comma-separated)</label>
+            </div>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <input class="mdl-textfield__input" type="upload" id="directory" name="directory" onclick="openFileDialog()">
+              <label class="mdl-textfield__label" for="directory">Output</label>
+            </div>
+          </div>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--6-col">
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="camelCase">
+              <input type="checkbox" id="camelCase" class="mdl-switch__input" checked name="camelCase">
+              <span class="mdl-switch__label" style="color: #999">Camelize</span>
+            </label>
+          </div>
+          <div class="mdl-cell mdl-cell--6-col">
+            <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="typescript">
+              <input type="checkbox" id="typescript" class="mdl-switch__input" name="typescript">
+              <span class="mdl-switch__label" style="color: #999">TypeScript</span>
+            </label>
+          </div>
+        </div>
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--12-col" style="text-align: center;">
+            <button id="exportBtn" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
+               Export
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

@@ -1,0 +1,73 @@
+{
+  "header": {
+    "contact": "Support",
+    "home": "Home",
+    "media": "Pers",
+    "mediaTitle": "Voor alle media vragen, graag mailen naar het pers@humally.com",
+    "news": "Nieuws & Updates",
+    "download": "Download",
+    "soon": "Binnenkort"
+  },
+  "main": {
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
+  },
+  "faq": {
+    "faq": "Veel gestelde vragen"
+  },
+  "contact": {
+    "contactTitle": "Kom in contact",
+    "contactSubtitle": "Wij zijn er voor jou. Heb je nog vragen of over het product of wil je gewoon meer informatie ontvangen? Vul dan het onderstaande formulier in.",
+    "contactName": "Naam",
+    "contactNamePlaceholder": "Vul voor- en achternaam in",
+    "contactEmail": "E-mailadres",
+    "contactEmailPlaceholder": "Vul e-mailadres in",
+    "contactTopic": "Ondewerp",
+    "contactTopicPlaceholder": "Selecteer...",
+    "contactMessage": "Bericht",
+    "contactMessagePlaceholder": "Typ bericht",
+    "contactSend": "Versturen",
+    "contactOpt0": "Selecteer",
+    "contactOpt1": "Support",
+    "contactOpt2": "Pers en Media",
+    "contactOpt3": "Partners",
+    "contactOpt4": "Investeerders",
+    "contactOpt5": "Technisch",
+    "required": "Dit is een verplicht veld",
+    "emailInvalid": "E-mailadres ongeldig",
+    "successTitle": "Verstuur",
+    "successText": "Bericht succesvol verzonden",
+    "errorTitle": "Error ",
+    "errorText": "Bericht niet verzonden",
+    "error400Text" : "Vul velden in"
+  },
+  "auth": {
+    "errorContent": "The selected page mode is invalid",
+    "errorTitle": "Error encountered",
+    "emailVerifiedTitle": "Your email is verified",
+    "emailVerifiedText": "You can now sign in with your new account",
+    "emailUsedTitle": "Try verifying your email again",
+    "emailUsedText": "Your request to verify your email has expired or the link has already been used",
+    "updatedEmailAddress": "Updated email address",
+    "updateLine_1": "Your sign-in email address has been changed back to",
+    "updateLine_2": "If you didnt't ask to change your sign-in email, It's possible someone is trying to access your account and you should",
+    "updateLine_3": "change your password right away",
+    "checkMail": "Check your email",
+    "checkMailContent_1": "Follow the instructions sent to",
+    "checkMailContent_2": "to recover your password",
+    "updateErrorTitle": "Unable to update your email address",
+    "updateErrorContent": "Your request to recover your email has expired or the link has already been used",
+    "resetTitle": "Reset your password",
+    "resetContent": "for",
+    "newPassword": "New password",
+    "newPasswordSend": "Send",
+    "newPasswordError": "Enter your password",
+    "passwordChangedTitle": "Password changed",
+    "passwordChangedText": "You can now sign in with your new password.",
+    "weakPassword": "Strong passwords have at least 6 char and a mix of letters and numbers",
+    "invalidAction": "The code might have expired or the password is too weak.",
+    "passwordReturnError": "The code might have expired or the password is too weak.",
+    "passwordUsedTitle": "Try resetting your password again",
+    "passwordUsedText": "Your request to reset your password has expired or the link has already been used"
+  }
+}

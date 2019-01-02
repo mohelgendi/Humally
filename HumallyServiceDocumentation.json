@@ -1,0 +1,2442 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "The rest api which is developed in node.js for servicing Humally's back-end requirements.  ",
+    "version": "1.0.0",
+    "title": "Humally Backend Layer",
+    "contact": {
+      "email": "ertan.caliskan@amatisbilisim.com"
+    }
+  },
+  "host": "humallyservicelayer-env.uumjp5ppd8.eu-west-3.elasticbeanstalk.com",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Humally",
+      "description": "Everything about Humally"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/sendSMSVerification": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Sends sms token request to Messagebird",
+        "description": "",
+        "operationId": "sendSMSVerification",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Values will be sent with predefined object hierarchy",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/smsVerificationRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/smsVerificationResponse"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/verifySMSToken": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Verifies token value which is sent from Messagebird",
+        "description": "",
+        "operationId": "verifySMSToken",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Values will be sent with predefined object hierarchy",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/verifySMSTokenRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/verifySMSTokenResponse"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/getToken": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Gets token value from user id and secret",
+        "description": "",
+        "operationId": "getToken",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "query",
+            "description": "user id of user",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "secret",
+            "in": "query",
+            "description": "authentication secret of user",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ApiResponse"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/createUser": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Creates new user after registeration to authentication layer",
+        "description": "",
+        "operationId": "createUser",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Values will be sent with predefined object hierarchy",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/UserResponse"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/updateMyProfile": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Creates new user after registeration to authentication layer",
+        "description": "",
+        "operationId": "updateMyProfile",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Values will be sent with predefined object hierarchy",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/UserUpdate"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/UserResponse"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/getSettings": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Gets the settings of requested user",
+        "description": "",
+        "operationId": "getSettings",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Settings"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/updateSettings": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "updates selected settings of user",
+        "description": "",
+        "operationId": "updateSettings",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Values will be sent with predefined object hierarchy",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Settings"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/SettingsResponse"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/setFriendRequest": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Sends, accepts or rejects friend request",
+        "description": "",
+        "operationId": "setFriendRequest",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Values will be sent with predefined object hierarchy",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/FriendRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/FriendRequestResponse"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/updateNotification": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Sends, accepts or rejects friend request",
+        "description": "",
+        "operationId": "updateNotification",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Values will be sent with predefined object hierarchy",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Notification"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Notification"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/getNotifications": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Gets the plan if it is not removed",
+        "description": "",
+        "operationId": "getNotifications",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "plan id of plan",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "authentication secret of user",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Notification"
+              }
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/getPlan": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Gets the plan if it is not removed",
+        "description": "",
+        "operationId": "getPlan",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "uid",
+            "in": "query",
+            "description": "plan id of plan",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "key",
+            "in": "query",
+            "description": "authentication secret of user",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Plan"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/getTimeline": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Gets the plan if it is not removed",
+        "description": "",
+        "operationId": "getTimeline",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "actual number of page",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "size of current page",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Plan"
+              }
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/getEvents": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Gets actual events",
+        "description": "",
+        "operationId": "getEvents",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "actual number of page",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "size of current page",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Event"
+              }
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/setInvitationStatus": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Sets current invitation status or sends invitation",
+        "description": "",
+        "operationId": "setInvitationStatus",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "status",
+            "in": "query",
+            "description": "status of request or invitation",
+            "required": true,
+            "type": "integer",
+            "enum": [
+              "Invited",
+              "Accepted",
+              "Rejected",
+              "Requested"
+            ]
+          },
+          {
+            "name": "eventKey",
+            "in": "query",
+            "description": "identifier of actual event",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/InvitationStatus"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/getMoreComment": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Sets current invitation status or sends invitation",
+        "description": "",
+        "operationId": "getMoreComment",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "actual page number of comment list",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "description": "actual page size of comment list",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "eventKey",
+            "in": "query",
+            "description": "identifier of actual event",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CommentListItem"
+              }
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/sendComment": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Sets current invitation status or sends invitation",
+        "description": "",
+        "operationId": "sendComment",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "comment",
+            "in": "query",
+            "description": "content text of current comment",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "eventKey",
+            "in": "query",
+            "description": "identifier of actual event",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/CommentResponse"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/deleteComment": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Sets current invitation status or sends invitation",
+        "description": "",
+        "operationId": "deleteComment",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "commentKey",
+            "in": "query",
+            "description": "identifier of actual event",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/removePlan": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Removes selected plan",
+        "description": "",
+        "operationId": "removePlan",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Values will be sent with predefined object hierarchy",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/removePlanRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/setPlan": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Creates new plan",
+        "description": "",
+        "operationId": "setPlan",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Values will be sent with predefined object hierarchy",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Plan"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Plan"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/getProfile": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Gets the actual user information or provided profileId",
+        "description": "",
+        "operationId": "getProfile",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "profileId",
+            "in": "query",
+            "description": "Profile id of user",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/DetailedUser"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/getFriendList": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Gets the actual user friends or provided profileId",
+        "description": "",
+        "operationId": "getFriendList",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "profileId",
+            "in": "query",
+            "description": "Profile id of user",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DetailedUser"
+              }
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/findUsers": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Gets the actual user friends or provided profileId",
+        "description": "",
+        "operationId": "findUsers",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "Profile id of user",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DetailedUser"
+              }
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/getFriendsFromLocation": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Gets the actual user friends or provided profileId",
+        "description": "",
+        "operationId": "getFriendsFromLocation",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "profileId",
+            "in": "query",
+            "description": "Profile id of user",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DetailedUser"
+              }
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/getCheckInPlaceHistory": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Gets the actual user friends or provided profileId",
+        "description": "",
+        "operationId": "getCheckInPlaceHistory",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "profileId",
+            "in": "query",
+            "description": "Profile id of user",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/DetailedUser"
+              }
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/getBadgeCount": {
+      "get": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Gets the actual user friends or provided profileId",
+        "description": "",
+        "operationId": "getBadgeCount",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/BadgeCount"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/registerDevice": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Registers device type and fcm token",
+        "description": "",
+        "operationId": "registerDevice",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Values will be sent with predefined object hierarchy",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DeviceTypeRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/DeviceTypeResponse"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/setRequestStatus": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Registers device type and fcm token",
+        "description": "",
+        "operationId": "setRequestStatus",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Values will be sent with predefined object hierarchy",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/PermissionRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/PermissionResponse"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/setCurrentLocation": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Registers device type and fcm token",
+        "description": "",
+        "operationId": "setCurrentLocation",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Values will be sent with predefined object hierarchy",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/LatLong"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/LatLong"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    },
+    "/photoUpload": {
+      "post": {
+        "tags": [
+          "Humally"
+        ],
+        "summary": "Uploads photo with several sizes",
+        "description": "",
+        "operationId": "photoUpload",
+        "consumes": [
+          "multipart/form-data"
+        ],
+        "produces": [
+          "application/xml",
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "photo",
+            "type": "file",
+            "required": true,
+            "description": "The file to upload."
+          },
+          {
+            "in": "formData",
+            "name": "userUid",
+            "type": "string",
+            "required": true,
+            "description": "The file to upload."
+          },
+          {
+            "in": "formData",
+            "name": "photoType",
+            "type": "string",
+            "required": true,
+            "description": "The file to upload."
+          },
+          {
+            "in": "formData",
+            "name": "eventKey",
+            "type": "string",
+            "required": false,
+            "description": "The file to upload."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Photo"
+            }
+          },
+          "400": {
+            "description": "Error occured in server-side and client will receive that with type and message"
+          },
+          "403": {
+            "description": "Unauthorized request"
+          }
+        },
+        "security": [
+          {
+            "api_key": []
+          }
+        ]
+      }
+    }
+  },
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "name": "authorization",
+      "in": "header"
+    }
+  },
+  "definitions": {
+    "UserUpdate": {
+      "type": "object",
+      "properties": {
+        "bio": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "type": "number"
+        },
+        "description": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "livingAddress": {
+          "type": "object"
+        },
+        "educations": {
+          "type": "object"
+        },
+        "interests": {
+          "type": "object"
+        },
+        "jobs": {
+          "type": "object"
+        },
+        "relationship": {
+          "type": "string"
+        },
+        "sexualOrientation": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "photoURL": {
+          "$ref": "#/definitions/Photo"
+        },
+        "coverPhoto": {
+          "$ref": "#/definitions/Photo"
+        }
+      },
+      "xml": {
+        "name": "UserUpdate"
+      }
+    },
+    "User": {
+      "type": "object",
+      "properties": {
+        "deviceLanguage": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "integer",
+          "format": "bit"
+        },
+        "dateOfBirth": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "photoURL": {
+          "$ref": "#/definitions/Photo"
+        }
+      },
+      "xml": {
+        "name": "User"
+      }
+    },
+    "BadgeCount": {
+      "type": "object",
+      "properties": {
+        "notificationBadgeCount": {
+          "type": "integer"
+        },
+        "chatBadgeCount": {
+          "type": "integer"
+        }
+      },
+      "xml": {
+        "name": "BadgeCount"
+      }
+    },
+    "UserResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "bio": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "integer"
+        },
+        "language": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "livingAddress": {
+          "type": "string"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "coverPhoto": {
+          "$ref": "#/definitions/Photo"
+        },
+        "educations": {
+          "type": "object"
+        },
+        "interests": {
+          "type": "object"
+        },
+        "jobs": {
+          "type": "object"
+        },
+        "photo": {
+          "$ref": "#/definitions/Photo"
+        }
+      },
+      "xml": {
+        "name": "UserResponse"
+      }
+    },
+    "Photo": {
+      "type": "object",
+      "properties": {
+        "raw": {
+          "type": "string"
+        },
+        "t_160": {
+          "type": "string"
+        },
+        "t_80": {
+          "type": "string"
+        },
+        "t_48": {
+          "type": "string"
+        },
+        "t_420": {
+          "type": "string"
+        },
+        "t_210": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Photo"
+      }
+    },
+    "DeviceTypeRequest": {
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string"
+        },
+        "deviceType": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "DeviceTypeRequest"
+      }
+    },
+    "PermissionRequest": {
+      "type": "object",
+      "properties": {
+        "receiverId": {
+          "type": "string"
+        },
+        "requestType": {
+          "type": "integer",
+          "enum": [
+            "Phone"
+          ]
+        },
+        "requestStatus": {
+          "type": "integer",
+          "enum": [
+            "Reqeusted",
+            "Accepted",
+            "Rejected"
+          ]
+        }
+      },
+      "xml": {
+        "name": "PermissionRequest"
+      }
+    },
+    "PermissionResponse": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "integer"
+        },
+        "requestedUserId": {
+          "type": "integer"
+        },
+        "type": {
+          "type": "integer",
+          "enum": [
+            "Phone"
+          ]
+        },
+        "status": {
+          "type": "integer",
+          "enum": [
+            "Reqeusted",
+            "Accepted",
+            "Rejected"
+          ]
+        }
+      },
+      "xml": {
+        "name": "PermissionResponse"
+      }
+    },
+    "DeviceTypeResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "userId": {
+          "type": "integer"
+        },
+        "deviceType": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "DeviceTypeResponse"
+      }
+    },
+    "Video": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "thumbnail": {
+          "$ref": "#/definitions/Photo"
+        }
+      },
+      "xml": {
+        "name": "Video"
+      }
+    },
+    "BasicUser": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "photo": {
+          "$ref": "#/definitions/Photo"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        }
+      }
+    },
+    "Plan": {
+      "type": "object",
+      "properties": {
+        "planKey": {
+          "type": "integer"
+        },
+        "category": {
+          "type": "string"
+        },
+        "subCategory": {
+          "type": "string"
+        },
+        "checkInPlace": {
+          "type": "object",
+          "format": "bit"
+        },
+        "location": {
+          "$ref": "#/definitions/Location"
+        },
+        "note": {
+          "type": "string"
+        },
+        "eventId": {
+          "type": "integer"
+        },
+        "event": {
+          "type": "object"
+        },
+        "comments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Comment"
+          }
+        },
+        "detailedUser": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BasicUser"
+          }
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/Photo"
+              },
+              {
+                "$ref": "#/definitions/Video"
+              }
+            ]
+          }
+        },
+        "start": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "end": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "invitedUsers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BasicUser"
+          }
+        }
+      },
+      "xml": {
+        "name": "Plan"
+      }
+    },
+    "Event": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "content": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "number"
+        },
+        "segment": {
+          "type": "string"
+        },
+        "genre": {
+          "type": "string"
+        },
+        "subGenre": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "subType": {
+          "type": "string"
+        },
+        "promoter": {
+          "type": "string"
+        },
+        "photoURL": {
+          "$ref": "#/definitions/Photo"
+        },
+        "name": {
+          "type": "string"
+        },
+        "authenticationId": {
+          "type": "number"
+        },
+        "location": {
+          "$ref": "#/definitions/Location"
+        },
+        "allParticipants": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BasicUser"
+          }
+        },
+        "commonFriends": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/BasicUser"
+          }
+        }
+      },
+      "xml": {
+        "name": "Event"
+      }
+    },
+    "CommentListItem": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "text": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "owner": {
+          "$ref": "#/definitions/BasicUser"
+        }
+      },
+      "xml": {
+        "name": "CommentListItem"
+      }
+    },
+    "CommentResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "userId": {
+          "type": "integer"
+        },
+        "planId": {
+          "type": "integer"
+        },
+        "content": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Comment"
+      }
+    },
+    "InvitationStatus": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "user_id": {
+          "type": "integer"
+        },
+        "plan_id": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "integer",
+          "enum": [
+            "Invited",
+            "Accepted",
+            "Rejected",
+            "Requested"
+          ]
+        }
+      },
+      "xml": {
+        "name": "InvitationStatus"
+      }
+    },
+    "ApiResponse": {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "object"
+        },
+        "success": {
+          "type": "boolean"
+        },
+        "error": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Error"
+          }
+        }
+      },
+      "xml": {
+        "name": "ApiResponse"
+      }
+    },
+    "Error": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Error"
+      }
+    },
+    "Location": {
+      "type": "object",
+      "properties": {
+        "address": {
+          "type": "string"
+        },
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        },
+        "placeID": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "Location"
+      }
+    },
+    "DetailedUser": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "bio": {
+          "type": "string"
+        },
+        "countrey": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "gender": {
+          "type": "integer"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "livingAddress": {
+          "type": "string"
+        },
+        "loggedInBefore": {
+          "type": "boolean"
+        },
+        "phoneNumber": {
+          "type": "string"
+        },
+        "relationShip": {
+          "type": "integer"
+        },
+        "sexualOrientation": {
+          "type": "integer"
+        },
+        "profileVersion": {
+          "type": "string"
+        },
+        "coverPhoto": {
+          "$ref": "#/definitions/Photo"
+        },
+        "educations": {
+          "type": "object"
+        },
+        "interests": {
+          "type": "object"
+        },
+        "jobs": {
+          "type": "object"
+        },
+        "photo": {
+          "$ref": "#/definitions/Photo"
+        },
+        "whoCanContactMe": {
+          "type": "string"
+        },
+        "language": {
+          "type": "string"
+        },
+        "messagesNotif": {
+          "type": "boolean"
+        },
+        "invitesNotif": {
+          "type": "boolean"
+        },
+        "joinedNotig": {
+          "type": "boolean"
+        },
+        "commentNotif": {
+          "type": "boolean"
+        },
+        "fcmDeviceId": {
+          "type": "string"
+        },
+        "deviceType": {
+          "type": "string"
+        },
+        "friendList": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/DetailedUser"
+          }
+        }
+      },
+      "xml": {
+        "name": "DetailedUser"
+      }
+    },
+    "smsVerificationRequest": {
+      "type": "object",
+      "properties": {
+        "phoneNumber": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "smsVerificationRequest"
+      }
+    },
+    "smsVerificationResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        },
+        "receipent": {
+          "type": "string"
+        },
+        "reference": {
+          "type": "string"
+        },
+        "messages": {
+          "type": "object"
+        },
+        "status": {
+          "type": "string"
+        },
+        "createdDatetime": {
+          "type": "string"
+        },
+        "validUntilDatetime": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "smsVerificationResponse"
+      }
+    },
+    "verifySMSTokenRequest": {
+      "type": "object",
+      "properties": {
+        "verifyId": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "smsVerificationRequest"
+      }
+    },
+    "verifySMSTokenResponse": {
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string"
+        },
+        "token": {
+          "type": "string"
+        },
+        "secret": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "verifySMSTokenResponse"
+      }
+    },
+    "removePlanRequest": {
+      "type": "object",
+      "properties": {
+        "myScheduleItemKey": {
+          "type": "string"
+        }
+      },
+      "xml": {
+        "name": "removePlanRequest"
+      }
+    },
+    "FriendRequest": {
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "number"
+        },
+        "friendId": {
+          "type": "number"
+        },
+        "action": {
+          "type": "integer",
+          "enum": [
+            "Requested",
+            "BeFriend",
+            "Rejected"
+          ]
+        }
+      },
+      "xml": {
+        "name": "FriendRequest"
+      }
+    },
+    "FriendRequestResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "userId": {
+          "type": "number"
+        },
+        "friendUserId": {
+          "type": "number"
+        },
+        "friendshipTime": {
+          "type": "string"
+        },
+        "status": {
+          "type": "integer",
+          "enum": [
+            "Requested",
+            "BeFriend",
+            "Rejected"
+          ]
+        }
+      },
+      "xml": {
+        "name": "FriendRequestResponse"
+      }
+    },
+    "Comment": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "text": {
+          "type": "string"
+        },
+        "uid": {
+          "type": "string"
+        },
+        "owner": {
+          "$ref": "#/definitions/BasicUser"
+        }
+      },
+      "xml": {
+        "name": "Comment"
+      }
+    },
+    "Settings": {
+      "type": "object",
+      "properties": {
+        "whoCanContactMe": {
+          "type": "boolean"
+        },
+        "language": {
+          "type": "string"
+        },
+        "notificationSettings": {
+          "$ref": "#/definitions/NotificationSetings"
+        }
+      },
+      "xml": {
+        "name": "Settings"
+      }
+    },
+    "NotificationSetings": {
+      "type": "object",
+      "properties": {
+        "messages": {
+          "type": "boolean"
+        },
+        "friendRequests": {
+          "type": "boolean"
+        },
+        "invites": {
+          "type": "boolean"
+        },
+        "joined": {
+          "type": "boolean"
+        },
+        "comments": {
+          "type": "boolean"
+        }
+      },
+      "xml": {
+        "name": "NotificationSetings"
+      }
+    },
+    "SettingsResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "userId": {
+          "type": "integer"
+        },
+        "whoCanContactMe": {
+          "type": "boolean"
+        },
+        "language": {
+          "type": "string"
+        },
+        "messagesNotif": {
+          "type": "boolean"
+        },
+        "friendrequestsNotif": {
+          "type": "boolean"
+        },
+        "invitesNotif": {
+          "type": "boolean"
+        },
+        "joinedNotif": {
+          "type": "boolean"
+        },
+        "commentNotif": {
+          "type": "boolean"
+        }
+      },
+      "xml": {
+        "name": "SettingsResponse"
+      }
+    },
+    "Notification": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "notificationType": {
+          "type": "integer"
+        },
+        "notificationTypeName": {
+          "type": "string"
+        },
+        "timelineplanKey": {
+          "type": "number"
+        },
+        "userId": {
+          "type": "string"
+        },
+        "ownerId": {
+          "type": "string"
+        },
+        "createDate": {
+          "type": "number"
+        },
+        "event": {
+          "$ref": "#/definitions/Plan"
+        },
+        "owner": {
+          "$ref": "#/definitions/BasicUser"
+        },
+        "eventId": {
+          "type": "number"
+        }
+      },
+      "xml": {
+        "name": "Notification"
+      }
+    },
+    "LatLong": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        }
+      },
+      "xml": {
+        "name": "LatLong"
+      }
+    }
+  }
+}

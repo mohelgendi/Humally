@@ -1,0 +1,68 @@
+{
+  "media": {
+    "en": {
+      "1": {
+        "id":1,
+        "showOrder": 0,
+        "shortDescription": "shortDescription",
+        "updatedBy": "test@amatisbilisim.com",
+        "owner": "test3 test3",
+        "isLock": true,
+        "createdBy": "test@amatisbilisim.com",
+        "title": "test",
+        "lang": "en",
+        "lockedBy": "test@amatisbilisim.com",
+        "updatedAt": "29.05.2018 13:00",
+        "date": "",
+        "cratedAt": "29.05.2018 11:51",
+        "isPublish": false,
+        "headerImageUrl": "https://firebasestorage.googleapis.com/v0/b/humally-web.appspot.com/o/images%2F1529672907809_AqGnView1.jpg?alt=media&token=926f4bec-79e7-478a-8d19-bc29abb8aeaf",
+        "detailImageUrl": "https://firebasestorage.googleapis.com/v0/b/humally-web.appspot.com/o/images%2F1529672917007_AqGnView2.jpg?alt=media&token=6ceec42b-737b-42c2-b21e-d7e5944d7c4c",
+        "lockedAt": "29.05.2018 13:00",
+        "longDescription": "longDescription"
+      },
+      "2": {
+        "id":2,
+        "showOrder": 0,
+        "shortDescription": "test2 en",
+        "updatedBy": "test@amatisbilisim.com",
+        "owner": "test3 test3",
+        "isLock": true,
+        "createdBy": "test@amatisbilisim.com",
+        "title": "test 2 en",
+        "lang": "en",
+        "lockedBy": "test@amatisbilisim.com",
+        "updatedAt": "29.05.2018 13:00",
+        "date": "",
+        "cratedAt": "29.05.2018 11:51",
+        "isPublish": false,
+        "headerImageUrl": "https://firebasestorage.googleapis.com/v0/b/humally-web.appspot.com/o/images%2F1529672907809_AqGnView1.jpg?alt=media&token=926f4bec-79e7-478a-8d19-bc29abb8aeaf",
+        "detailImageUrl": "https://firebasestorage.googleapis.com/v0/b/humally-web.appspot.com/o/images%2F1529672917007_AqGnView2.jpg?alt=media&token=6ceec42b-737b-42c2-b21e-d7e5944d7c4c",
+        "lockedAt": "29.05.2018 13:00",
+        "longDescription": "test"
+      }
+    },
+    "nl": {
+      "1": {
+        "id":1,
+        "isLock": false,
+        "createdBy": "test@amatisbilisim.com",
+        "title": "test 5",
+        "lang": "en",
+        "lockedBy": "",
+        "updatedAt": "29.05.2018 13:00",
+        "date": "",
+        "cratedAt": "29.05.2018 10:34",
+        "isPublish": false,
+        "headerImageUrl": "https://firebasestorage.googleapis.com/v0/b/humally-web.appspot.com/o/images%2F1529672907809_AqGnView1.jpg?alt=media&token=926f4bec-79e7-478a-8d19-bc29abb8aeaf",
+        "detailImageUrl": "https://firebasestorage.googleapis.com/v0/b/humally-web.appspot.com/o/images%2F1529672917007_AqGnView2.jpg?alt=media&token=6ceec42b-737b-42c2-b21e-d7e5944d7c4c",
+        "lockedAt": "",
+        "longDescription": "",
+        "showOrder": 0,
+        "shortDescription": "test 5",
+        "updatedBy": "test@amatisbilisim.com",
+        "owner": "test2 test"
+      }
+    }
+  }
+}

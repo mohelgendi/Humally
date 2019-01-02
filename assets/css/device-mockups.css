@@ -1,0 +1,94 @@
+/*!
+ * html5-device-mockups (iphone_6.psd
+landscape_black.png
+landscape_gold.png
+landscape_white.png
+portrait_black.png
+portrait_white.png)
+ * Copyright 2013 - 2017 pixelsign
+ * Licensed under MIT (https://github.com/pixelsign/html5-device-mockups/blob/master/LICENSE.txt)
+ * Last Build: Tue Nov 14 2017 12:40:57
+ */
+/*!
+ * html5-device-mockups (https://github.com/pixelsign/html5-device-mockups)
+ * Copyright 2013 - 2017 pixelsign
+ * Licensed under MIT (https://github.com/pixelsign/html5-device-mockups/blob/master/LICENSE.txt)
+ * Last Build: Tue Nov 14 2017 12:39:20
+ */
+.device-wrapper {
+  max-width: 300px;
+  width: 100%;
+}
+
+.device {
+  position: relative;
+  background-size: cover;
+}
+
+.device .screen {
+  position: absolute;
+  background-size: cover;
+  pointer-events: none;
+}
+
+.device .button {
+  position: absolute;
+  cursor: default;
+}
+
+.device[data-device="iPhone6"][data-orientation="portrait"][data-color="black"] {
+  padding-bottom: 207.62016%;
+  background-image: url(../device-mockups/iPhone6/portrait_black.png);
+}
+
+.device[data-device="iPhone6"][data-orientation="portrait"][data-color="black"] .screen {
+  top: 12.25296%;
+  left: 6.09613%;
+  width: 88.0422%;
+  height: 75.32468%;
+}
+
+.device[data-device="iPhone6"][data-orientation="portrait"][data-color="black"] .button {
+  top: 89.32806%;
+  left: 41.85229%;
+  width: 16.64713%;
+  height: 8.01807%;
+}
+
+.device[data-device="iPhone6"][data-orientation="portrait"][data-color="white"] {
+  padding-bottom: 207.62016%;
+  background-image: url(../device-mockups/iPhone6/portrait_white.png);
+}
+
+.device[data-device="iPhone6"][data-orientation="portrait"][data-color="white"] .screen {
+  top: 12.25296%;
+  left: 6.09613%;
+  width: 88.0422%;
+  height: 75.32468%;
+}
+
+.device[data-device="iPhone6"][data-orientation="portrait"][data-color="white"] .button {
+  top: 89.32806%;
+  left: 41.85229%;
+  width: 16.64713%;
+  height: 8.01807%;
+}
+
+.device[data-device="iPhone6"][data-orientation="portrait"][data-color="gold"] {
+  padding-bottom: 207.62016%;
+  background-image: url(../device-mockups/iPhone6/portrait_gold.png);
+}
+
+.device[data-device="iPhone6"][data-orientation="portrait"][data-color="gold"] .screen {
+  top: 12.25296%;
+  left: 6.09613%;
+  width: 88.0422%;
+  height: 75.32468%;
+}
+
+.device[data-device="iPhone6"][data-orientation="portrait"][data-color="gold"] .button {
+  top: 89.32806%;
+  left: 41.85229%;
+  width: 16.64713%;
+  height: 8.01807%;
+}

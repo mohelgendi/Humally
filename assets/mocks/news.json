@@ -1,0 +1,62 @@
+{
+  "news": {
+    "en": {
+      "1": {
+        "id": 1,
+        "lang": "en",
+        "paragraph": "test",
+        "paragraphDetail": "test",
+        "date": "2018-06-22",
+        "cratedAt": "22.06.2018 16:08",
+        "isPublish": false,
+        "subtitle": "test",
+        "headerImageUrl": "https://firebasestorage.googleapis.com/v0/b/humally-web.appspot.com/o/images%2F1529672907809_AqGnView1.jpg?alt=media&token=926f4bec-79e7-478a-8d19-bc29abb8aeaf",
+        "detailImageUrl": "https://firebasestorage.googleapis.com/v0/b/humally-web.appspot.com/o/images%2F1529672917007_AqGnView2.jpg?alt=media&token=6ceec42b-737b-42c2-b21e-d7e5944d7c4c",
+        "showOrder": 0,
+        "owner": "test test",
+        "isLock": false,
+        "category": "test",
+        "createdBy": "test@amatisbilisim.com",
+        "title": "test"
+      },
+      "2": {
+        "id": 2,
+        "lang": "en",
+        "paragraph": "test",
+        "paragraphDetail": "test",
+        "date": "2018-06-22",
+        "cratedAt": "22.06.2018 16:08",
+        "isPublish": false,
+        "subtitle": "test",
+        "headerImageUrl": "https://firebasestorage.googleapis.com/v0/b/humally-web.appspot.com/o/images%2F1529672907809_AqGnView1.jpg?alt=media&token=926f4bec-79e7-478a-8d19-bc29abb8aeaf",
+        "detailImageUrl": "https://firebasestorage.googleapis.com/v0/b/humally-web.appspot.com/o/images%2F1529672917007_AqGnView2.jpg?alt=media&token=6ceec42b-737b-42c2-b21e-d7e5944d7c4c",
+        "showOrder": 0,
+        "owner": "test test",
+        "isLock": false,
+        "category": "test",
+        "createdBy": "test@amatisbilisim.com",
+        "title": "test2"
+      }
+    },
+    "nl": {
+      "1": {
+        "id": 1,
+        "lang": "nl",
+        "paragraph": "test",
+        "paragraphDetail": "test",
+        "date": "2018-06-22",
+        "cratedAt": "22.06.2018 16:08",
+        "isPublish": false,
+        "subtitle": "test",
+        "headerImageUrl": "https://firebasestorage.googleapis.com/v0/b/humally-web.appspot.com/o/images%2F1529672907809_AqGnView1.jpg?alt=media&token=926f4bec-79e7-478a-8d19-bc29abb8aeaf",
+        "detailImageUrl": "https://firebasestorage.googleapis.com/v0/b/humally-web.appspot.com/o/images%2F1529672917007_AqGnView2.jpg?alt=media&token=6ceec42b-737b-42c2-b21e-d7e5944d7c4c",
+        "showOrder": 0,
+        "owner": "test test",
+        "isLock": false,
+        "category": "test",
+        "createdBy": "test@amatisbilisim.com",
+        "title": "test nl"
+      }
+    }
+  }
+}

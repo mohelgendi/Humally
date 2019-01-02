@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "message": null,
+  "error_list": null,
+  "data": {
+    "title": "What people are saying about Humally",
+    "user": [
+      {
+        "userName": "Prof. Dr. Paul Iske",
+        "location": "Amsterdam",
+        "title": "Real Social",
+        "text": "This is the first big app I know, based on the premise that the user is the customer and doing so,delivers a meaningful contribution to people’s social lives"
+      },
+      {
+        "userName": "Gijs Kingma",
+        "location": "Leeuwarden",
+        "title": "Groundbreaking",
+        "text": "An App that makes it easy to meet new people wherever I am. Even in a foreign country where you do not know anyone, it is easy to make new contacts"
+      },
+      {
+        "userName": "Meftun Erdemir",
+        "location": "Rotterdam",
+        "title": "Time saving",
+        "text": "You can easily plan all kinds of activities with friends, from eating together to a city trip. Also chat and share a photo or video in the app. How convenient!"
+      },
+      {
+        "userName": "Afke Zijlstra",
+        "location": "Leeuwarden",
+        "title": "All-in-one",
+        "text": "Personally, I am fed up with all of the"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "message": null,
+  "error_list": null,
+  "data": {
+    "title": "Active Social",
+    "subTitle": "The online tool for your offline life",
+    "btnIos": "Download",
+    "btnAndroid": "Soon"
+  }
+}

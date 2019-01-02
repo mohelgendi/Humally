@@ -1,0 +1,132 @@
+{
+  "mainContents": {
+    "en": {
+      "section_1": {
+        "playStoreLink": "javascript:void(0)",
+        "imageLink": "assets/image/banner_slide_en.jpg",
+        "title": "The online tool for your offline life",
+        "appStoreLink": "https://itunes.apple.com/nl/app/humally/id1349680709?mt=8",
+        "textArea": "Plan activities with friends and meet new people. Humally inspires and is about real life.",
+        "subtitle": "Humally - Active social"
+      },
+      "section_2": {
+        "line_2": "Select with whom",
+        "line_3": "Share your plans with others",
+        "images": [
+          "assets/image/slideImg/en/plan_category.jpg",
+          "assets/image/slideImg/en/plan_add_friends.jpg",
+          "assets/image/slideImg/en/plan_share.jpg"
+        ],
+        "line_1": "Select an activity",
+        "title": "Plan with friends",
+        "subtitle": "Plan an activity and invite friends. Discover our active community, focused on real life. Whatever you want, you plant it with Humally."
+      },
+      "section_4": {
+        "main_title": "Other functions",
+        "title_4": "Nearby",
+        "title_6": "Agenda",
+        "text_6": "All plans easily viewed",
+        "text_2": "Show who you are with your own profile",
+        "title_5": "Settings",
+        "text_4": "View which friends are in your area",
+        "text_1": "Chat securely with all your friends within the app",
+        "title_2": "Profiles",
+        "text_3": "All notifications are clearly arranged in your inbox",
+        "title_3": "Notifications",
+        "title_1": "Chatting",
+        "text_5": "Protect your data, manage app settings"
+      },
+      "section_3": {
+        "subtitle": "View the plans of people in your area or share an activity yourself and let others join you.",
+        "line_2": "Share this with (un)known people",
+        "line_3": "Let others join",
+        "images": [
+          "assets/image/slideImg/en/meet_category.jpg",
+          "assets/image/slideImg/en/meet_share.jpg",
+          "assets/image/slideImg/en/meet_timeline.jpg"
+        ],
+        "line_1": "Select an activity",
+        "title": "Meet new people"
+      },
+      "section_5": {
+        "main_subtitle": "",
+        "text_1": "We don’t share data with others",
+        "title_2": "No ads",
+        "text_3": "In Humally is all about the user experience",
+        "playStoreLink": "#",
+        "title_3": "User first",
+        "icon_3": "assets/image/lock.svg",
+        "title_1": "No data to third parties",
+        "icon_1": "assets/image/lock.svg",
+        "icon_2": "assets/image/lock.svg",
+        "main_title": "Now available",
+        "appleStoreLink": "https://itunes.apple.com/nl/app/humally/id1349680709?mt=8",
+        "text_2": "Clean timelines, without advertising"
+      }
+    },
+    "nl": {
+      "section_1": {
+        "title": "Humally - Actief sociaal",
+        "appStoreLink": "https://itunes.apple.com/nl/app/humally/id1349680709?mt=8",
+        "textArea": "Humally is het activiteitennetwerk voor iedereen die graag sociaal actief is. Je plant er activiteiten met vrienden en ontmoet nieuwe mensen. Humally inspireert en draait om het echte leven.",
+        "subtitle": "De online tool voor je offline leven",
+        "playStoreLink": "javascript:void(0)",
+        "imageLink": "assets/image/banner_slide_nl.jpg"
+      },
+      "section_2": {
+        "images": [
+          "assets/image/slideImg/nl/plan_category.jpg",
+          "assets/image/slideImg/nl/plan_add_friends.jpg",
+          "assets/image/slideImg/nl/plan_share.jpg"
+        ],
+        "line_1": "Kies een activiteit",
+        "title": "Plan met vrienden",
+        "subtitle": "Plan een activiteit en nodig vrienden uit. Ontdek onze actieve community, gericht op het echte leven. Wat je ook wilt, je plant het met Humally.",
+        "line_2": "Selecteer met wie",
+        "line_3": "Deel jouw plan met anderen"
+      },
+      "section_4": {
+        "text_1": "Binnen de app veilig chatten met al jouw vrienden",
+        "title_2": "Profielen",
+        "text_3": "Alle notificaties overzichtelijk in jouw inbox",
+        "title_3": "Notificaties",
+        "title_1": "Chatten",
+        "text_5": "Stel de app in op basis van jouw voorkeuren",
+        "main_title": "Meer functies",
+        "title_4": "In de buurt",
+        "title_6": "Agenda",
+        "text_6": "Alle plannen in jouw agenda, per dag, per week en maand",
+        "text_2": "Laat zien wie jij bent met jouw eigen profiel",
+        "title_5": "Instellingen",
+        "text_4": "Zie welke vrienden bij jou in de buurt zijn "
+      },
+      "section_3": {
+        "title": "Ontmoet nieuwe mensen",
+        "subtitle": "Bekijk de plannen van mensen in jouw omgeving of deel zelf een activiteit en laat anderen aanhaken.",
+        "line_2": "Deel die met (on)bekenden",
+        "line_3": "Laat anderen aansluiten",
+        "images": [
+          "assets/image/slideImg/nl/meet_category.jpg",
+          "assets/image/slideImg/nl/meet_share.jpg",
+          "assets/image/slideImg/nl/meet_timeline.jpg"
+        ],
+        "line_1": "Kies een activiteit"
+      },
+      "section_5": {
+        "appleStoreLink": "https://itunes.apple.com/nl/app/humally/id1349680709?mt=8",
+        "text_2": "Schone tijdlijnen, zonder storende reclames",
+        "main_subtitle": "",
+        "text_1": "Wij delen geen gegevens met anderen",
+        "title_2": "Geen storende advertenties",
+        "text_3": "Bij Humally draait alles om de gebruikerservaring",
+        "playStoreLink": "#",
+        "title_3": "Gebruiker aan zet",
+        "icon_3": "assets/image/lock.svg",
+        "title_1": "Geen data naar derden",
+        "icon_1": "assets/image/lock.svg",
+        "icon_2": "assets/image/lock.svg",
+        "main_title": "Nu beschikbaar"
+      }
+    }
+  }
+}
